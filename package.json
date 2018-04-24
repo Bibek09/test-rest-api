@@ -1,0 +1,19 @@
+{
+  "name": "restetst",
+  "version": "1.0.0",
+  "description": "build a simple shiop API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Bibek K",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
