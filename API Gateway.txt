@@ -1,0 +1,33 @@
+https://2ajt86eyud.execute-api.us-east-1.amazonaws.com/prod/number?min=1&max=10
+
+'use strict';
+console.log('Loading function');
+exports.handler = (event, context, callback) => {
+
+  let min=parseInt(event.min);
+  let max=parseInt(event.max);
+  
+  let generatednumber=Math.floor(Math.random()*max)+min;
+  callback(null,generatednumber);
+};
+
+Note: In above case, go to API>GET>Integration >add template>application/json as
+
+{
+"min":$input.params('min'),
+"max":$input.params('max')
+}
+
+
+https://2ajt86eyud.execute-api.us-east-1.amazonaws.com/prod/number
+
+'use strict';
+console.log('Loading function');
+exports.handler = (event, context, callback) => {
+
+  let min=0;
+  let max=10;
+  
+  let generatednumber=Math.floor(Math.random()*max)+min;
+  callback(null,generatednumber);
+};
